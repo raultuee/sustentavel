@@ -229,7 +229,7 @@ export function Quiz() {
 				</p>
 				<div className="flex gap-3">
 					<Button
-						className="bg-blue-900 hover:bg-blue-600 text-white rounded-full border-2 border-blue-700"
+						className="bg-blue-900 hover:bg-blue-600 text-white rounded-full"
 						size="lg"
 						onClick={() => window.history.back()}
 					>

@@ -98,7 +98,7 @@ export function Home() {
           <Card className=" p-3 rounded-3xl bg-white/10 backdrop-blur-sm border-white/20 text-white group hover:bg-white/20 transition-all duration-500 cursor-pointer overflow-hidden">
             <CardHeader className="flex flex-col items-center justify-center h-full text-center relative">
               <CardTitle className="text-white text-xl mb-3 transform group-hover:-translate-y-4 transition-transform duration-500">
-              Pesquisar: Como reutilizar?
+              Função ainda não disponível.
               </CardTitle>
               <Input
               className="text-white text-sm opacity-0 group-hover:opacity-100 transform translate-y-8 group-hover:translate-y-0 transition-all duration-500 delay-200 max-w-xs leading-relaxed border-[#124E2A] placeholder:text-white"
