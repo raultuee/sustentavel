@@ -78,7 +78,7 @@ const reuseDatabase: Record<string, ReuseIdea[]> = {
 
 function getDifficultyColor(difficulty: string) {
   switch (difficulty) {
-    case "Fácil": return "text-blue-400";
+    case "Fácil": return "text-green-400";
     case "Médio": return "text-yellow-400";
     case "Difícil": return "text-red-400";
     default: return "text-white";
@@ -140,7 +140,7 @@ export function ReuseItemPage() {
           <Button 
             onClick={handleBack}
             variant="ghost" 
-            className="text-white hover:bg-white/20 p-2"
+            className="text-white hover:bg-white/20 p-2 rounded-full"
           >
             <ArrowLeft className="w-6 h-6" />
           </Button>
@@ -164,14 +164,14 @@ export function ReuseItemPage() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
                   placeholder="Digite o item que você quer reaproveitar (ex: garrafa pet, caixa de papelão, pneu...)"
-                  className="bg-white/5 border-white/30 text-white placeholder:text-white/60 pr-12"
+                  className="bg-white/5 border-white/30 text-white placeholder:text-white/60 pr-12 rounded-full"
                 />
                 <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/60" />
               </div>
               <Button 
                 onClick={handleSearch}
                 disabled={isSearching || !searchTerm.trim()}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6"
+                className="bg-green-600 hover:bg-green-700 text-white px-6 rounded-full"
               >
                 {isSearching ? "Buscando..." : "Buscar"}
               </Button>
@@ -221,13 +221,13 @@ export function ReuseItemPage() {
                         
                         <div className="space-y-2">
                           <div className="flex items-center gap-2 mb-2">
-                            <Leaf className="w-4 h-4 text-blue-400" />
-                            <span className="text-blue-400 font-medium text-sm">Benefícios:</span>
+                            <Leaf className="w-4 h-4 text-green-400" />
+                            <span className="text-green-400 font-medium text-sm">Benefícios:</span>
                           </div>
                           <ul className="space-y-1">
                             {idea.benefits.map((benefit, bIndex) => (
                               <li key={bIndex} className="text-white/70 text-sm flex items-start gap-2">
-                                <span className="text-blue-400 mt-1">•</span>
+                                <span className="text-green-400 mt-1">•</span>
                                 {benefit}
                               </li>
                             ))}
@@ -253,7 +253,7 @@ export function ReuseItemPage() {
                       <button
                         key={item}
                         onClick={() => setSearchTerm(item)}
-                        className="bg-blue-600/30 text-white px-3 py-1 rounded-full text-sm hover:bg-blue-600/50 transition-colors"
+                        className="bg-green-600/30 text-white px-3 py-1 rounded-full text-sm hover:bg-green-600/50 transition-colors"
                       >
                         {item}
                       </button>
@@ -282,7 +282,7 @@ export function ReuseItemPage() {
                   <button
                     key={item}
                     onClick={() => setSearchTerm(item)}
-                    className="bg-blue-600/20 text-white p-3 rounded-xl hover:bg-blue-600/40 transition-all duration-300 text-sm"
+                    className="bg-green-600/20 text-white p-3 rounded-full hover:bg-green-600/40 transition-all duration-300 text-sm"
                   >
                     {item}
                   </button>

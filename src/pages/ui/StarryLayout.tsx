@@ -61,7 +61,7 @@ export function StarryLayout({ children }: StarryLayoutProps) {
   }, []);
 
   return (
-    <div className="w-full min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+    <div className="w-full min-h-screen relative overflow-hidden bg-gradient-to-br from-green-950 via-green-900 to-emerald-900">
       {/* Canvas do céu estrelado */}
       <canvas
         ref={canvasRef}

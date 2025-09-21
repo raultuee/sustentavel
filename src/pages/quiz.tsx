@@ -203,7 +203,7 @@ export function Quiz() {
 
 	const getAlternativeStyle = (index: number) => {
 		if (!answered) {
-			return "bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white cursor-pointer";
+			return "bg-gradient-to-br from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white cursor-pointer";
 		}
 		if (index === quizQuestions[currentQuestion].correct) {
 			return "bg-gradient-to-br from-green-500 to-green-600 text-white";
@@ -214,7 +214,7 @@ export function Quiz() {
 		) {
 			return "bg-gradient-to-br from-red-500 to-red-600 text-white";
 		}
-		return "bg-gradient-to-br from-blue-600/50 to-blue-700/50 text-white/70";
+		return "bg-gradient-to-br from-green-600/50 to-green-700/50 text-white/70";
 	};
 
 	if (gameState === "start") {
@@ -223,20 +223,20 @@ export function Quiz() {
 				<h1 className="text-4xl font-bold tracking-tight text-white mb-4">
 					Quiz: Sustentabilidade
 				</h1>
-				<p className="text-blue-100 mb-8 text-lg text-center max-w-md">
-					Teste seus conhecimentos sobre sustentabilidade com 10 perguntas em 1
+				<p className="text-green-100 mb-8 text-lg text-center max-w-md">
+					Teste seu conhecimento sobre sustentabilidade com 10 questões em 1
 					minuto e 30 segundos!
 				</p>
 				<div className="flex gap-3">
 					<Button
-						className="bg-blue-900 hover:bg-blue-600 text-white rounded-full"
+						className="bg-green-900 hover:bg-green-700 text-white rounded-full"
 						size="lg"
 						onClick={() => window.history.back()}
 					>
 						<ArrowLeft className="w-4 h-4 mr-2" /> Voltar
 					</Button>
 					<Button
-						className="bg-white text-blue-950 hover:bg-gray-200 rounded-full"
+						className="bg-white text-green-950 hover:bg-gray-200 rounded-full"
 						size="lg"
 						onClick={startQuiz}
 					>
@@ -289,7 +289,7 @@ export function Quiz() {
 						style={{ animationDelay: "0.5s" }}
 					></div>
 					<div
-						className="absolute top-1/2 left-1/6 w-1 h-1 bg-blue-300/40 rounded-full animate-ping"
+						className="absolute top-1/2 left-1/6 w-1 h-1 bg-green-300/40 rounded-full animate-ping"
 						style={{ animationDelay: "1s" }}
 					></div>
 					<div
@@ -322,10 +322,10 @@ export function Quiz() {
 		return (
 			<div className="w-full h-screen flex flex-col items-center justify-center ">
 				<div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 text-center shadow-2xl">
-					<h2 className="text-3xl font-bold text-blue-950 mb-4">
+					<h2 className="text-3xl font-bold text-green-950 mb-4">
 						Quiz Finalizado!
 					</h2>
-					<div className="text-6xl font-bold text-blue-600 mb-2">{score}</div>
+					<div className="text-6xl font-bold text-green-600 mb-2">{score}</div>
 					<p className="text-xl text-gray-700 mb-4">
 						de {quizQuestions.length} questões
 					</p>
@@ -334,7 +334,7 @@ export function Quiz() {
 					</p>
 					<div className="flex gap-3 justify-center">
 						<Button
-							className="bg-blue-900 hover:bg-blue-600 text-white rounded-full"
+							className="bg-green-900 hover:bg-green-600 text-white rounded-full"
 							onClick={restartQuiz}
 						>
 							Tentar Novamente
@@ -352,13 +352,13 @@ export function Quiz() {
 			}`}
 		>
 			<div className="flex justify-between items-center px-8 py-6">
-				<Button
-					className="bg-transparent hover:bg-blue-800/50 text-white text-xl font-semibold px-0"
+				<a
+					className="bg-transparent hover:bg-green-800/50 text-white text-xl font-semibold px-0 cursor-pointer"
 					onClick={restartQuiz}
-					variant="ghost"
+
 				>
 					Sair
-				</Button>
+				</a>
 				<div className="text-white text-4xl font-bold">
 					{formatTime(timeLeft)}
 				</div>
@@ -400,9 +400,9 @@ export function Quiz() {
 							key={index}
 							className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
 								index < currentQuestion
-									? "bg-blue-500 text-white"
+									? "bg-green-500 text-white"
 									: index === currentQuestion
-									? "bg-white text-blue-950"
+									? "bg-white text-green-950"
 									: "bg-white/30 text-white/70"
 							}`}
 						>
