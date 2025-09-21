@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Ellipsis } from "lucide-react";
 
 export function Home() {
@@ -83,36 +82,39 @@ export function Home() {
           </h1>
         </div>
         <div className="w-full grid grid-cols-2 gap-4 max-w-4xl">
-          <a href="/quiz">
-            <Card className=" p-3 rounded-3xl bg-white/10 backdrop-blur-sm border-white/20 text-white group hover:bg-white/20 transition-all duration-500 cursor-pointer overflow-hidden">
+          <a href="/quiz" className="h-full">
+            <Card className="h-40 flex flex-col justify-center p-3 rounded-3xl bg-white/10 backdrop-blur-sm border-white/20 text-white group hover:bg-white/20 transition-all duration-500 cursor-pointer overflow-hidden">
               <CardHeader className="flex flex-col items-center justify-center h-full text-center relative">
-                <CardTitle className="text-white text-xl transform group-hover:-translate-y-4 transition-transform duration-500">
-                  Questões: Sustentabilidade
-                </CardTitle>
-                <p className="text-white/90 text-sm opacity-0 group-hover:opacity-100 transform translate-y-8 group-hover:translate-y-0 transition-all duration-500 delay-200 max-w-xs leading-relaxed">
-                  Teste seu conhecimento sustentável por meio de quizzes.
-                </p>
+          <CardTitle className="text-white text-xl transform group-hover:-translate-y-4 transition-transform duration-500">
+            Questões: Sustentabilidade
+          </CardTitle>
+          <p className="text-white/90 text-sm opacity-0 group-hover:opacity-100 transform translate-y-8 group-hover:translate-y-0 transition-all duration-500 delay-200 max-w-xs leading-relaxed">
+            Teste seu conhecimento sustentável por meio de quizzes.
+          </p>
               </CardHeader>
             </Card>
           </a>
-          <Card className=" p-3 rounded-3xl bg-white/10 backdrop-blur-sm border-white/20 text-white group hover:bg-white/20 transition-all duration-500 cursor-pointer overflow-hidden">
-            <CardHeader className="flex flex-col items-center justify-center h-full text-center relative">
-              <CardTitle className="text-white text-xl mb-3 transform group-hover:-translate-y-4 transition-transform duration-500">
-              Função ainda não disponível.
-              </CardTitle>
-              <Input
-              className="text-white text-sm opacity-0 group-hover:opacity-100 transform translate-y-8 group-hover:translate-y-0 transition-all duration-500 delay-200 max-w-xs leading-relaxed border-[#124E2A] placeholder:text-white"
-              placeholder="Escreva o item que deseja reutilizar"
-              />
-            </CardHeader>
-          </Card>
-            <Card className="col-span-2 w-full rounded-xl p-3 bg-white/10 backdrop-blur-sm border-white/20 text-white group hover:bg-white/20 transition-all duration-500 cursor-pointer overflow-hidden">
+          <a href="/reaproveitamento" className="h-full">
+            <Card className="h-40 flex flex-col justify-center p-3 rounded-3xl bg-white/10 backdrop-blur-sm border-white/20 text-white group hover:bg-white/20 transition-all duration-500 cursor-pointer overflow-hidden">
+              <CardHeader className="flex flex-col items-center justify-center h-full text-center relative">
+          <div className="flex items-center gap-3 transform group-hover:-translate-y-4 transition-transform duration-500">
+            <CardTitle className="text-white text-xl">
+              Reaproveitamento
+            </CardTitle>
+          </div>
+          <p className="text-white/90 text-sm opacity-0 group-hover:opacity-100 transform translate-y-8 group-hover:translate-y-0 transition-all duration-500 delay-200 max-w-xs leading-relaxed">
+            Descubra como dar nova vida aos objetos que você não usa mais.
+          </p>
+              </CardHeader>
+            </Card>
+          </a>
+          <Card className="col-span-2 w-full rounded-xl p-3 bg-white/10 backdrop-blur-sm border-white/20 text-white group hover:bg-white/20 transition-all duration-500 cursor-pointer overflow-hidden">
             <CardHeader className="flex flex-col items-center justify-center h-full text-center relative p-0">
               <CardTitle className="text-white text-xl">
                 <Ellipsis />
               </CardTitle>
             </CardHeader>
-            </Card>
+          </Card>
         </div>
       </div>
     </div>

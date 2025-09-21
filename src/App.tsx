@@ -8,6 +8,7 @@ import { Home } from './pages/home';
 import { LoadingPage } from './utils/loading-page';
 import { StarryLayout } from './pages/ui/StarryLayout';
 import { Quiz } from './pages/quiz';
+import { ReuseItemPage } from './pages/reutilizar';
 export function App() {
 
   return (
@@ -26,7 +27,7 @@ export function App() {
 
               <Route path='/quiz' element={<Quiz/>}/>
 
-              <Route path='/' element={<Home/>}/>
+              <Route path='/reaproveitamento' element={<ReuseItemPage/>}/>
 
               <Route path='*' element={<Error />} />
 
