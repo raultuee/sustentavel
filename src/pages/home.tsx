@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Ellipsis } from "lucide-react";
-import { toast } from "sonner";
 
 export function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -109,7 +108,7 @@ export function Home() {
               </CardHeader>
             </Card>
           </a>
-          <Card className="col-span-2 w-full rounded-xl p-3 bg-white/10 backdrop-blur-sm border-white/20 text-white group hover:bg-white/20 transition-all duration-500 cursor-pointer overflow-hidden" onClick={() => toast.info("Criado por @raultue")}>
+          <Card className="col-span-2 w-full rounded-xl p-3 bg-white/10 backdrop-blur-sm border-white/20 text-white group hover:bg-white/20 transition-all duration-500 cursor-pointer overflow-hidden">
             <CardHeader className="flex flex-col items-center justify-center h-full text-center relative p-0">
               <CardTitle className="text-white text-xl">
                 <Ellipsis />
